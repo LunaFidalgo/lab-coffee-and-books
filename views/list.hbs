@@ -1,0 +1,16 @@
+  <ul>
+      {{#each places}}
+      <li>
+        <a> {{this.name}}</a>
+        <a href="/{{ this._id}}">{{ this.name}}<span>{{ this.description }}</span></a> |
+        <a href="/{{ this._id}}/edit">Edit</a>
+        <a href="/{{ this._id}}/delete">Delete</a>
+
+        <p> {{this.location}}</p>
+      </li>
+      {{/each }}
+
+    </ul>
+  </div>
+  <div id="map"></div>
+  <script> const locationPlaces = {{{places}}} </script>
